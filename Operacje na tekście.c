@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-// Funkcja zamieniająca duże litery na małe
 void toLower(char text[]) {
     int i = 0;
     while (text[i]) {
         if ('A' <= text[i] && text[i] <= 'Z') {
-            text[i] += ('a' - 'A'); // Przesunięcie w tablicy ASCII
+            text[i] += ('a' - 'A');
         }
         i++;
     }
 }
 
-// Funkcja zamieniająca małe litery na duże
 void toUpper(char text[]) {
     int i = 0;
     while (text[i]) {
@@ -22,7 +20,6 @@ void toUpper(char text[]) {
     }
 }
 
-// Funkcja mierząca długość tekstu
 int textSize(char text[]) {
     int size = 0;
     while (text[size] != '\0') {
