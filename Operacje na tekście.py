@@ -2,7 +2,6 @@ text = "Ala ma kota, a kot ma Ale."
 
 print(f"Oryginalny tekst: {text}")
 
-# W Pythonie napisy są niezmienne, więc metody tworzą nową wersję tekstu
 text_lower = text.lower()
 print(f"Małe litery:       {text_lower}")
 
