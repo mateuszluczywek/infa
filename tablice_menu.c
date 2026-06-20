@@ -51,6 +51,21 @@ void bubbleSort(int array[], int size) {
     }
 }
 
+float calculateMedian(int array[], int size) {
+    int copy[SIZE];
+    for (int i = 0; i < size; i++) {
+        copy[i] = array[i];
+    }
+    
+    bubbleSort(copy, size);
+    
+    if (size % 2 != 0) {
+        return (float)copy[size / 2];
+    } else {
+        return (float)(copy[(size / 2) - 1] + copy[size / 2]) / 2.0;
+    }
+}
+
 void menu() {
     printf("\n1. Wpisz nowe wartosci do tablicy\n");
     printf("2. Wyswietl zawartosc tablicy\n");
@@ -58,6 +73,7 @@ void menu() {
     printf("4. Znajdz wartosc maksymalna\n");
     printf("5. Oblicz wartosc srednia\n");
     printf("6. Posortuj tablice (Bubble Sort)\n");
+    printf("7. Oblicz mediane\n");
     printf("0. WYJSCIE\n");
     printf("Wybierz opcje: ");
 }
@@ -99,6 +115,9 @@ int main() {
                 bubbleSort(array, SIZE);
                 printf("\nTablica zostala posortowana babelkowo!\n");
                 printArray(array, SIZE);
+                break;
+            case 7:
+                printf("\nMediana wynosi: %.2f\n", calculateMedian(array, SIZE));
                 break;
             default:
                 printf("\nWybierz poprawna opcje...\n");
