@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h> // Potrzebne do funkcji atoi (zamiana tekstu na int)
-#include <string.h> // Potrzebne do funkcji strcmp (porównywanie tekstu)
+#include <stdlib.h>
+#include <string.h>
 
 void usage(char *programName) {
     printf("Sposob uzycia: %s <liczba1> <operacja> <liczba2>\n", programName);
@@ -9,7 +9,7 @@ void usage(char *programName) {
 }
 
 int main(int argc, char* argv[]) {
-    // Program oczekuje dokładnie 4 argumentów: nazwa_programu, liczba1, operacja, liczba2
+
     if (argc != 4) {
         usage(argv[0]);
         return 1;
