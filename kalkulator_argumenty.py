@@ -5,7 +5,6 @@ def usage(program_name):
     print("Dostępne operacje: add, sub, mul, div")
 
 def main():
-    # sys.argv zawiera argumenty linii poleceń
     if len(sys.argv) != 4:
         usage(sys.argv[0])
         sys.exit(1)
