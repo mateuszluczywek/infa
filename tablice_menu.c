@@ -1,14 +1,12 @@
 #include <stdio.h>
 #define SIZE 10
 
-// Funkcja wyswietlajaca tablice
 void printArray(int array[], int size) {
     for (int i = 0; i < size; ++i) {
         printf("array[%d] = %d\n", i, array[i]);
     }
 }
 
-// Funkcja szukajaca minimum
 int findMinimum(int array[], int size) {
     int min = array[0];
     for (int i = 1; i < size; i++) {
@@ -19,7 +17,6 @@ int findMinimum(int array[], int size) {
     return min;
 }
 
-// Funkcja szukajaca maksimum
 int findMaximum(int array[], int size) {
     int max = array[0];
     for (int i = 1; i < size; i++) {
@@ -30,7 +27,6 @@ int findMaximum(int array[], int size) {
     return max;
 }
 
-// Funkcja liczaca sume
 int calculateSum(int array[], int size) {
     int sum = 0;
     for (int i = 0; i < size; i++) {
@@ -39,12 +35,10 @@ int calculateSum(int array[], int size) {
     return sum;
 }
 
-// Funkcja liczaca srednia
 float calculateAverage(int array[], int size) {
     return (float)calculateSum(array, size) / size;
 }
 
-// Funkcja wyswietlajaca menu
 void menu() {
     printf("\n1. Wpisz nowe wartosci do tablicy\n");
     printf("2. Wyswietl zawartosc tablicy\n");
