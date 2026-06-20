@@ -39,12 +39,25 @@ float calculateAverage(int array[], int size) {
     return (float)calculateSum(array, size) / size;
 }
 
+void bubbleSort(int array[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+
 void menu() {
     printf("\n1. Wpisz nowe wartosci do tablicy\n");
     printf("2. Wyswietl zawartosc tablicy\n");
     printf("3. Znajdz wartosc minimalna\n");
     printf("4. Znajdz wartosc maksymalna\n");
     printf("5. Oblicz wartosc srednia\n");
+    printf("6. Posortuj tablice (Bubble Sort)\n");
     printf("0. WYJSCIE\n");
     printf("Wybierz opcje: ");
 }
@@ -81,6 +94,11 @@ int main() {
                 break;
             case 5:
                 printf("\nSrednia wartosc: %.2f\n", calculateAverage(array, SIZE));
+                break;
+            case 6:
+                bubbleSort(array, SIZE);
+                printf("\nTablica zostala posortowana babelkowo!\n");
+                printArray(array, SIZE);
                 break;
             default:
                 printf("\nWybierz poprawna opcje...\n");
