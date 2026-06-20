@@ -20,7 +20,7 @@ while True:
         else:
             print("Błąd: Nie można dzielić przez zero!")
             
-        print("-" * 20) # Oddzielenie dla czytelności
+        print("-" * 20)
         
     except ValueError:
         print("To nie jest prawidłowa liczba! Spróbuj ponownie.")
