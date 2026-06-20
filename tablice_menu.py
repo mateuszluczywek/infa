@@ -2,12 +2,20 @@ def print_array(arr):
     for i, val in enumerate(arr):
         print(f"array[{i}] = {val}")
 
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
 def menu():
-    print("\n1. Wpisz nowe wartości do tablicy")
+    print("\n1. Wtysz nowe wartości do tablicy")
     print("2. Wyświetl zawartość tablicy")
     print("3. Znajdź wartość minimalną")
     print("4. Znajdź wartość maksymalną")
     print("5. Oblicz wartość średnią")
+    print("6. Posortuj tablicę (Bubble Sort)") 
     print("0. WYJŚCIE")
     return input("Wybierz opcję: ")
 
@@ -43,6 +51,11 @@ def main():
         elif option == '5':
             avg = sum(array) / len(array)
             print(f"\nŚrednia wartość: {avg:.2f}")
+            
+        elif option == '6':
+            bubble_sort(array)
+            print("\nTablica została posortowana bąbelkowo!")
+            print_array(array)
             
         else:
             print("\nWybierz poprawną opcję...")
